@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/normalize.min..css">
+    <link rel="stylesheet" type="text/css" href="lib/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+    <title>The Time Travel Quiz</title>
+</head>
+<body>
+<header>
+    <div class="content">
+        <h1><span>The</span> <span>Time Travel</span> <span>Quiz</span></h1>
+    </div>
+</header>
+<main id="main" role="main">
+    <div class="content"> 
+
+        <section id="quiz">
+            <div id="stats">
+                <div id="stats-score">SCORE: <span class="score">0</span></div>
+                <div id="stats-progress">QUESTION: <span id="progress">1/5</span></div>
+                <hr class="clearfix">
+            </div>
+            <div id="question">
+                <div id="icon"><i class="fa fa-bolt"></i></div>
+                <p id="text">[question text goes here]</p>
+                <form>
+                <div><input type="radio" name="ans" value="1"> <span id="option-1">[option one]</span> </div>
+                <div><input type="radio" name="ans" value="2"> <span id="option-2">[option two]</span> </div>
+                <div><input type="radio" name="ans" value="3"> <span id="option-3">[option three]</span> </div>
+                <div><input type="radio" name="ans" value="4"> <span id="option-4">[option four]</span> </div>
+                <div><input type="radio" name="ans" value="5"> <span id="option-5">[option five]</span> </div>
+                </form>
+                <button id="answer-btn">Submit Answer</button>    
+            </div>
+        </section>
+
+        <section id="start">
+            <button id="start-btn">START QUIZ</button>
+            <h2>Testimonials</h2>
+            <p><sup><i class="fa fa-quote-left"></i></sup> Not this again! I can't go through this again. <sup><i class="fa fa-quote-right"></i></sup> <br> &mdash; <em>Phil Conners</em></p>
+            <p><sup><i class="fa fa-quote-left"></i></sup> Are you Sarah Connor? <sup><i class="fa fa-quote-right"></i></sup> <br> &mdash; <em>The Terminator</em></p>
+            <p><sup><i class="fa fa-quote-left"></i></sup> What is this infernal contraption? Who are you and what are you doing in my residence? Constable! <sup><i class="fa fa-quote-right"></i></sup> <br> &mdash; <em>Charles Dickens</em></p>
+            <p><sup><i class="fa fa-quote-left"></i></sup> Time travel. It'll turn your brain into spaghetti if you let it. Best not to think about it. <sup><i class="fa fa-quote-right"></i></sup> <br> &mdash; <em>Ray</em></p>
+        </section>    
+
+        <section id="correct" class="pop-up">
+            <h2>Correct!<br>+1</h2>
+            <p>Congratulations, you now have <span class="score">0</span> point(s).<br>Perhaps I underestimated you.</p>
+            <br>
+            <p><button class="cont-btn">Continue</button></p>
+        </section>
+
+        <section id="wrong" class="pop-up">
+            <h2>Wrong!</h2>
+            <p>Oh, I am sorry no points for you.<br>... you know, because you were so wrong.</p>
+            <br>
+            <p><button class="cont-btn">Continue</button></p>
+        </section>
+
+        <section id="final" class="pop-up">
+            <h2>Fin</h2>
+            <p>You got a score of: <span class="score">[0]</span></p>
+            <p>You achieved a rank of: <span class="rank">[rank]</span></p>
+            <p><span class="rank-msg">[msg]</span></p>
+            <br>
+            <p><button id="start-over">Try Again</button></p>
+        </section>
+
+
+
+    </div>
+</main>
+<footer>
+    <div class="content">
+        <div class="disclaim">Legal Disclaimer &bull; The Time Travel Quiz is not responsible for time-related anomalies experienced by users, including but not limited to time loops, ancestor-based paradoxes, or butterfly effect chain reactions. Use of the quiz does not create an understanding between you and The Time Travel Quiz in the present, past, and/or future - including in any parallel dimensions or multiple universe environments.</div>
+        <div id="copyright">Copyright &copy; 2015, Edward Bryant</div>    
+    </div>    
+</footer>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
