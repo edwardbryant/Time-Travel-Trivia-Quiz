@@ -1,0 +1,218 @@
+
+
+$off-white: #fffadd;
+$bkgd-color-1: rgba(52,81,133,0.6);
+
+
+html {
+    color: $off-white;
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif; 
+    -webkit-font-smoothing: antialiased; 
+}
+body {
+    font-size: 10px; 
+    font-size: 1rem;
+    background-image: url('../img/blueprint.png');
+}
+.content {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+main {
+    margin: 2rem 0;
+}
+section {
+    margin: 4px 0;
+}
+h1 {
+    text-shadow: 2px 2px 4px #000;
+    letter-spacing: 0.6rem;
+    text-transform: uppercase;
+    span {
+        display: block;
+        font-size: 4.6rem;
+    }
+    span:first-of-type {
+        font-size: 2rem;    
+    }
+    span:last-of-type {
+        font-size: 3rem;
+    }
+}
+#start {
+    width: 100%;
+    border-top: 1px dashed $off-white;
+    border-bottom: 1px dashed $off-white;
+    font-size: 1.6rem;
+    #instruct {
+        background-color: $bkgd-color-1;
+        float: left;
+        width: 56%;
+        margin: 1.25%;
+    }
+    #instruct p {
+        padding: 1rem;
+    }
+    #btn-area {
+        float: right;
+        width: 36%;
+        margin: 1.25%;
+    }
+    #btn-area button {
+        padding: 1.2rem 3rem;
+    }
+    h2 {
+        color: $off-white;
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+    }
+}
+#testimonials {
+    border-bottom: 1px dashed $off-white;
+    font-size: 2rem;    
+}
+button {
+    background-color: #66cc99;
+    padding: 12px;
+    border: 2px solid #000;
+    color: #fff;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 1px #000;
+    cursor: pointer;
+}
+#quiz {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#stats {
+    background-color: #000047;
+    border-top: 1px solid #36c;
+    border-right: 1px solid #36c;
+    border-left: 1px solid #36c;
+    padding: 10px;   
+    font-size: 1.2rem;
+    #stats-score {
+        float: left;
+        letter-spacing: 0.2rem;
+    }
+    #stats-progress {
+        float: right;
+        letter-spacing: 0.2rem;
+    }
+    #score, #progress {
+        color: #94A3D1;    
+    } 
+}
+#question {
+    background-color: #000047;
+    border: 1px solid #36c;
+    padding: 3% 10% 3% 10%;    
+    font-size: 2rem;
+    strong {
+        color: #94A3D1;
+        font-weight: normal;
+    }
+    #icon {
+        font-size: 4rem;
+    }
+    form {
+        margin-left: 18%;
+        text-align: left;
+    }
+    form div {
+        margin: 0;
+        padding: 1px;
+        font-size: 1.7rem;
+    }
+}
+.pop-up {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem;
+    font-size: 2rem;    
+}
+#correct {
+    border: 1px solid #66cc99;
+    background-color: #002247;
+    h2 {
+        color: #66cc99;
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px #000;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+    }
+}
+#wrong {
+    border: 1px solid #cc6699;    
+    background-color: #220047;
+    h2 {
+        color: #cc6699;
+        font-size: 3rem;
+        text-shadow: 2px 2px 4px #000;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+    }
+}
+#final {
+    border: 1px solid #36c;
+    background-color: #000047;
+    h2 {
+        font-size: 3rem;
+    }
+    .score, .rank {
+        font-size: 3rem;
+        color: #66cc99;
+        padding-left: 1rem;
+    }
+}
+footer {
+    color: #77a;
+    .disclaim {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    div {
+        margin-bottom: 1rem;
+    }
+    a:link, a:active, a:visited, a:hover {
+        color: #36c;
+    }
+    a:hover {
+        color: #33c;
+    }
+}
+@media (max-width: 600px) {
+    #start {
+        #instruct, #btn-area {
+            float: none;
+            width: 94%;
+        }
+    }
+    footer {
+        .disclaim {
+            padding: 2rem; 
+        }
+    }
+
+}
+
+
+
+
+

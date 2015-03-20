@@ -1,9 +1,89 @@
+$(document).ready(function() {
+    cycleTestimonials();
+    $("#start-btn").click(function() {       
+        var head = $("<span>The Time Travel Quiz</span>");
+        $("h1").find("span").remove();
+        $("h1").append(head);
+        $("#start").fadeOut(500, function() {
+            $('#testimonials').fadeOut(100, function(){
+                newGame();
+                findQuestion();
+                loadQuestion();
+                $("#quiz").FadeIn(500);    
+            });
+        });
+    });
+    $("#answer-btn").click(function() {
+        var user_answer = $('input:radio[name=ans]:checked').val();
+        console.log(user_answer);
+        if (!user_answer) {
+            console.log("nothing selected");
+            alert('Please make a selection!');
+        } else {
+            console.log("selection made");    
+            if (correct(user_answer)) {
+                $('#quiz').fadeOut(500, function() {
+                    score++;
+                    updateScore();
+                    $('#correct').fadeIn(500);    
+                });
+            } else {
+                $('#quiz').fadeOut(500, function() {
+                    $('#wrong').fadeIn(500);
+                });
+            }
+        }
+    });
+    $(".cont-btn").click(function() {       
+        $('#correct').fadeOut(500, function() {
+            $('#wrong').fadeOut(500, function() {
+                if (count >= count_limit) {
+                    updateScore();
+                    updateRank();
+                    $('#final').fadeIn(500);
+                } else {
+                    findQuestion();
+                    loadQuestion();
+                    $('form input').prop('checked', false);
+                    $('#quiz').fadeIn(500);
+                }
+            });
+        });
+    });
+    $("#start-over").click(function() {       
+        $("#final").fadeOut(500, function() {
+            newGame();
+            findQuestion();
+            loadQuestion();
+            $('form input').prop('checked', false);
+            $("#quiz").fadeIn(500);    
+        });
+    });
+});
 
 var num = 0;
 var count = 0;
 var count_limit = 5;
 var score = 0;
 var prior_questions = [];
+
+var cycleTestimonials = function() {
+    var target = $('#testimonials').children('p')
+    var testLen = target.length;
+    for (i=0;i<testLen;i++) {
+        var prev;
+        if (i === 0) {
+            prev = testLen - 1;
+        } else {
+            prev = i - 1;
+        }
+        console.log("i is "+i+" | prev is "+prev);
+        //target.parent().children('p:eq('+prev+')').fadeOut(3500, function(){
+            target.parent().children('p:eq('+i+')').fadeIn(3500);
+        //});
+    }
+};
+
 
 var quiz_questions = {
     1: {
@@ -272,71 +352,6 @@ function updateRank(){
 }
 
 
-$(document).ready(function() {
-    
-    $("#start-btn").click(function() {       
-        var head = $("<span>The Time Travel Quiz</span>");
-        $("h1").find("span").remove();
-        $("h1").append(head);
-        $("#start").fadeOut(500, function() {
-            newGame();
-            findQuestion();
-            loadQuestion();
-            $("#quiz").fadeIn(500);    
-        });
-    });
-
-    $("#answer-btn").click(function() {
-        var user_answer = $('input:radio[name=ans]:checked').val();
-        console.log(user_answer);
-        if (!user_answer) {
-            console.log("nothing selected");
-            alert('Please make a selection!');
-        } else {
-            console.log("selection made");    
-            if (correct(user_answer)) {
-                $('#quiz').fadeOut(500, function() {
-                    score++;
-                    updateScore();
-                    $('#correct').fadeIn(500);    
-                });
-            } else {
-                $('#quiz').fadeOut(500, function() {
-                    $('#wrong').fadeIn(500);
-                });
-            }
-        }
-    });
-
-    $(".cont-btn").click(function() {       
-        $('#correct').fadeOut(500, function() {
-            $('#wrong').fadeOut(500, function() {
-                if (count >= count_limit) {
-                    updateScore();
-                    updateRank();
-                    $('#final').fadeIn(500);
-                } else {
-                    findQuestion();
-                    loadQuestion();
-                    $('form input').prop('checked', false);
-                    $('#quiz').fadeIn(500);
-                }
-            });
-        });
-    });
-
-    $("#start-over").click(function() {       
-        $("#final").fadeOut(500, function() {
-            newGame();
-            findQuestion();
-            loadQuestion();
-            $('form input').prop('checked', false);
-            $("#quiz").fadeIn(500);    
-        });
-    });
-
-
-});
 
 
 
