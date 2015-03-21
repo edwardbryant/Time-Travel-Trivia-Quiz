@@ -22,7 +22,7 @@
         <section id="quiz" class="hidden">
             <div id="stats" class="clearfix">
                 <div id="stats-score">SCORE: <span class="score">0</span></div>
-                <div id="stats-progress">QUESTION: <span id="progress">1/5</span></div>
+                <div id="stats-progress">QUESTION: <span class="progress">0/0</span></div>
             </div>
             <div id="question">
                 <div id="icon"><i class="fa fa-bolt"></i></div>
@@ -45,27 +45,34 @@
                 <p><strong>STEP 2</strong>: Do well and brag about it or do horribly and hide in shame.</p>
             </div>
             <div id="btn-area">
-                <button id="start-btn"> START QUIZ</button>            
+                <button id="start-btn"> NEW GAME </button>            
             </div>
         </section>
 
         <section id="testimonials">
-            <p class="hidden"><sup><i class="fa fa-quote-left"></i></sup> Not this again! I can't go through this again. <sup><i class="fa fa-quote-right"></i></sup> <br> &mdash; <em>Phil Conners</em></p>
+            
+            <p><sup><i class="fa fa-quote-left"></i></sup> Not this again! I can't go through this again. <sup><i class="fa fa-quote-right"></i></sup> <br> &mdash; <em>Phil Conners</em></p>
+            
             <p class="hidden"><sup><i class="fa fa-quote-left"></i></sup> Are you Sarah Connor? <sup><i class="fa fa-quote-right"></i></sup> <br> &mdash; <em>The Terminator</em></p>
+            
             <p class="hidden"><sup><i class="fa fa-quote-left"></i></sup> What is this infernal contraption? Who are you and what are you doing in my residence? Constable! <sup><i class="fa fa-quote-right"></i></sup> <br> &mdash; <em>Charles Dickens</em></p>
+            
             <p class="hidden"><sup><i class="fa fa-quote-left"></i></sup> Time travel. It'll turn your brain into spaghetti if you let it. Best not to think about it. <sup><i class="fa fa-quote-right"></i></sup> <br> &mdash; <em>Ray</em></p>
+        
         </section>
 
         <section id="correct" class="pop-up hidden">
             <h2>Correct!<br>+1</h2>
-            <p>Congratulations, you now have <span class="score">0</span> point(s).<br>Perhaps I underestimated you.</p>
+            <p class="answer-exp">[x]</p>
+            <p>Congratulations, you now have <span class="score">0</span> point(s).</p>
             <br>
             <p><button class="cont-btn">Continue</button></p>
         </section>
 
         <section id="wrong" class="pop-up hidden">
             <h2>Wrong!</h2>
-            <p>Oh, I am sorry no points for you.<br>... you know, because you were so wrong.</p>
+            <p class="answer-exp">[x]</p>
+            <p>Oh, I am sorry no points for you.<br>... you know, because you were so wrong.<br>Your have <span class="score">0</span> point(s).</p>
             <br>
             <p><button class="cont-btn">Continue</button></p>
         </section>
@@ -85,7 +92,7 @@
 <footer>
     <div class="content">
         <div class="disclaim">Legal Disclaimer &bull; The Time Travel Quiz is not responsible for time-related anomalies experienced by users, including but not limited to time loops, ancestor-based paradoxes, or butterfly effect chain reactions. Use of the quiz does not create an understanding between you and The Time Travel Quiz in the present, past, and/or future - including in any parallel dimensions or multiple universe environments.</div>
-        <div id="copyright">Copyright &copy; 2015, Edward Bryant</div>    
+        <div id="copyright">Copyright <i class="fa fa-copyright"></i> 2015, Edward Bryant</div>    
     </div>    
 </footer>
 <script src="http://code.jquery.com/jquery.min.js"></script>

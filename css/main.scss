@@ -1,7 +1,10 @@
 
-
+$black: #000000;
 $off-white: #fffadd;
-$bkgd-color-1: rgba(52,81,133,0.6);
+$bright-blue: #3366cc;
+
+$bkgd-medium: rgba(52,81,133,0.6);
+$bkgd-dark: rgba(0,0,71,0.5);
 
 
 html {
@@ -37,18 +40,18 @@ section {
     margin: 4px 0;
 }
 h1 {
-    text-shadow: 2px 2px 4px #000;
+    text-shadow: 2px 2px 4px $black;
     letter-spacing: 0.6rem;
     text-transform: uppercase;
     span {
         display: block;
         font-size: 4.6rem;
     }
-    span:first-of-type {
-        font-size: 2rem;    
-    }
     span:last-of-type {
         font-size: 3rem;
+    }
+    span:first-of-type {
+        font-size: 2rem;    
     }
 }
 #start {
@@ -57,7 +60,7 @@ h1 {
     border-bottom: 1px dashed $off-white;
     font-size: 1.6rem;
     #instruct {
-        background-color: $bkgd-color-1;
+        background-color: $bkgd-medium;
         float: left;
         width: 56%;
         margin: 1.25%;
@@ -81,29 +84,44 @@ h1 {
 }
 #testimonials {
     border-bottom: 1px dashed $off-white;
-    font-size: 2rem;    
+    font-size: 2rem;
+    p {
+        padding: 2rem;
+    }
+}
+#quiz-home {
+
+    #home-stats {
+        float: left;
+        width: 40%;
+        border: 1px solid green;
+    }
+    #question-history {
+        float: right;
+        width: 52%;
+        border: 1px solid green;
+    }
 }
 button {
     background-color: #66cc99;
     padding: 12px;
-    border: 2px solid #000;
-    color: #fff;
+    border: 2px solid $black;
+    color: $off-white;
     font-size: 1.8rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px $black;
     cursor: pointer;
 }
 #quiz {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 #stats {
-    background-color: #000047;
-    border-top: 1px solid #36c;
-    border-right: 1px solid #36c;
-    border-left: 1px solid #36c;
+    background-color: $bkgd-dark;
+    border-top: 1px solid $bright-blue;
+    border-right: 1px solid $bright-blue;
+    border-left: 1px solid $bright-blue;
     padding: 10px;   
     font-size: 1.2rem;
     #stats-score {
@@ -114,13 +132,13 @@ button {
         float: right;
         letter-spacing: 0.2rem;
     }
-    #score, #progress {
+    .score, .progress {
         color: #94A3D1;    
     } 
 }
 #question {
-    background-color: #000047;
-    border: 1px solid #36c;
+    background-color: $bkgd-dark;
+    border: 1px solid $bright-blue;
     padding: 3% 10% 3% 10%;    
     font-size: 2rem;
     strong {
@@ -141,37 +159,46 @@ button {
     }
 }
 .pop-up {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 4rem;
-    font-size: 2rem;    
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2rem;
+    p {
+        margin: 2rem;
+    }
+    .answer-exp {
+        font-size: 1.6rem;
+        color: $off-white;
+    }
+    .score {
+        color: $off-white;
+        font-size: 2.4rem;
+    }
 }
 #correct {
+    color: #66cc99;
     border: 1px solid #66cc99;
     background-color: #002247;
     h2 {
-        color: #66cc99;
         font-size: 3rem;
-        text-shadow: 2px 2px 4px #000;
+        text-shadow: 2px 2px 4px $black;
         letter-spacing: 0.4rem;
         text-transform: uppercase;
     }
 }
 #wrong {
+    color: #cc6699;
     border: 1px solid #cc6699;    
     background-color: #220047;
     h2 {
-        color: #cc6699;
         font-size: 3rem;
-        text-shadow: 2px 2px 4px #000;
+        text-shadow: 2px 2px 4px $black;
         letter-spacing: 0.4rem;
         text-transform: uppercase;
     }
 }
 #final {
-    border: 1px solid #36c;
-    background-color: #000047;
+    border: 1px solid $bright-blue;
+    background-color: $bkgd-dark;
     h2 {
         font-size: 3rem;
     }
@@ -182,7 +209,7 @@ button {
     }
 }
 footer {
-    color: #77a;
+    color: $off-white;
     .disclaim {
         padding-left: 20%;
         padding-right: 20%;
@@ -191,7 +218,7 @@ footer {
         margin-bottom: 1rem;
     }
     a:link, a:active, a:visited, a:hover {
-        color: #36c;
+        color: $bright-blue;
     }
     a:hover {
         color: #33c;

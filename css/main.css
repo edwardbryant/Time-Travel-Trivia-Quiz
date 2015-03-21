@@ -31,16 +31,16 @@ section {
   margin: 4px 0; }
 
 h1 {
-  text-shadow: 2px 2px 4px #000;
+  text-shadow: 2px 2px 4px #000000;
   letter-spacing: 0.6rem;
   text-transform: uppercase; }
   h1 span {
     display: block;
     font-size: 4.6rem; }
-  h1 span:first-of-type {
-    font-size: 2rem; }
   h1 span:last-of-type {
     font-size: 3rem; }
+  h1 span:first-of-type {
+    font-size: 2rem; }
 
 #start {
   width: 100%;
@@ -68,28 +68,38 @@ h1 {
 #testimonials {
   border-bottom: 1px dashed #fffadd;
   font-size: 2rem; }
+  #testimonials p {
+    padding: 2rem; }
+
+#quiz-home #home-stats {
+  float: left;
+  width: 40%;
+  border: 1px solid green; }
+#quiz-home #question-history {
+  float: right;
+  width: 52%;
+  border: 1px solid green; }
 
 button {
   background-color: #66cc99;
   padding: 12px;
-  border: 2px solid #000;
-  color: #fff;
+  border: 2px solid #000000;
+  color: #fffadd;
   font-size: 1.8rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px #000000;
   cursor: pointer; }
 
 #quiz {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 0 auto; }
 
 #stats {
-  background-color: #000047;
-  border-top: 1px solid #36c;
-  border-right: 1px solid #36c;
-  border-left: 1px solid #36c;
+  background-color: rgba(0, 0, 71, 0.5);
+  border-top: 1px solid #3366cc;
+  border-right: 1px solid #3366cc;
+  border-left: 1px solid #3366cc;
   padding: 10px;
   font-size: 1.2rem; }
   #stats #stats-score {
@@ -98,12 +108,12 @@ button {
   #stats #stats-progress {
     float: right;
     letter-spacing: 0.2rem; }
-  #stats #score, #stats #progress {
+  #stats .score, #stats .progress {
     color: #94A3D1; }
 
 #question {
-  background-color: #000047;
-  border: 1px solid #36c;
+  background-color: rgba(0, 0, 71, 0.5);
+  border: 1px solid #3366cc;
   padding: 3% 10% 3% 10%;
   font-size: 2rem; }
   #question strong {
@@ -120,35 +130,41 @@ button {
     font-size: 1.7rem; }
 
 .pop-up {
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 4rem;
+  width: 100%;
+  margin: 0 auto;
   font-size: 2rem; }
+  .pop-up p {
+    margin: 2rem; }
+  .pop-up .answer-exp {
+    font-size: 1.6rem;
+    color: #fffadd; }
+  .pop-up .score {
+    color: #fffadd;
+    font-size: 2.4rem; }
 
 #correct {
+  color: #66cc99;
   border: 1px solid #66cc99;
   background-color: #002247; }
   #correct h2 {
-    color: #66cc99;
     font-size: 3rem;
-    text-shadow: 2px 2px 4px #000;
+    text-shadow: 2px 2px 4px #000000;
     letter-spacing: 0.4rem;
     text-transform: uppercase; }
 
 #wrong {
+  color: #cc6699;
   border: 1px solid #cc6699;
   background-color: #220047; }
   #wrong h2 {
-    color: #cc6699;
     font-size: 3rem;
-    text-shadow: 2px 2px 4px #000;
+    text-shadow: 2px 2px 4px #000000;
     letter-spacing: 0.4rem;
     text-transform: uppercase; }
 
 #final {
-  border: 1px solid #36c;
-  background-color: #000047; }
+  border: 1px solid #3366cc;
+  background-color: rgba(0, 0, 71, 0.5); }
   #final h2 {
     font-size: 3rem; }
   #final .score, #final .rank {
@@ -157,14 +173,14 @@ button {
     padding-left: 1rem; }
 
 footer {
-  color: #77a; }
+  color: #fffadd; }
   footer .disclaim {
     padding-left: 20%;
     padding-right: 20%; }
   footer div {
     margin-bottom: 1rem; }
   footer a:link, footer a:active, footer a:visited, footer a:hover {
-    color: #36c; }
+    color: #3366cc; }
   footer a:hover {
     color: #33c; }
 
