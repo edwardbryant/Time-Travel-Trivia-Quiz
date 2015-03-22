@@ -131,24 +131,21 @@ var updateScore = function() {
     $('.score').text(score);
 };
 var updateRank = function() {
-    if (score == 9 || score == 10){
-        $('.rank').text('Chronos');
-        $('.rank-msg').text('Prefect score! You are truly the god of time. Now just try not to eat your children (that kind of thing is frowned upon these days.)');
-    } else if (score == 7 || score == 8) {
+    if (score == 10){
+        $('.rank').text('Time Master');
+        $('.rank-msg').text('Prefect score!)');
+    } else if (score >= 7 && score <=  9) {
         $('.rank').text('Time Lord');
-        $('.rank-msg').text('You are a master of time and space. Time does your bidding, except for all that time you spent watching time travel movies - you can\'t get that back.');
-    } else if (score == 5 || score == 6) {
+        $('.rank-msg').text('You have mad time travel trivia skillz! Time does your bidding, except for all that time you spent watching time travel movies - you can\'t get that back.');
+    } else if (score >= 4 && score <= 6) {
+        $('.rank').text('Time Traveler');
+        $('.rank-msg').text('You may not be the best, but your not the worst.');
+    } else if (score >= 1 && score <= 3) {
         $('.rank').text('Time Traveling Sidekick');
-        $('.rank-msg').text('You may not be the best, but you know enough to make a good sidekick. The world needs people to keep idiots from destroying the fabric of space-time by becoming there own ancestor.');
-    } else if (score == 4 || score == 3) {
-        $('.rank').text('Time Bandit');
-        $('.rank-msg').text('An ok score - clearly not the worst, but far from the best.');
-    } else if (score == 2 || score == 1) {
-        $('.rank').text('Time Person');
-        $('.rank-msg').text('Meh. A not-so-exciting title for a not-so-exciting score. If you had the power to travel in time, you would probably use it to watch tv shows you missed - so you could save money on a DVR.');
+        $('.rank-msg').text('Meh. Not a great score, but if you ever ending up traveling through time you probably know enough to not accidently destroy the universe.');
     } else if (score == 0) {
         $('.rank').text('Time Dunce');
-        $('.rank-msg').text('The only "time traveling" you will be doing is starring at the clock while drool runs down your chin.');
+        $('.rank-msg').text('Doh! The only "time traveling" you apparently understand is starring at the clock while drool runs down your chin.');
     }
 };
 var quiz_questions = {
@@ -293,7 +290,7 @@ var quiz_questions = {
             5: "Clocks by Coldplay"
         },
         "answer": 4,
-        "answer-exp": "In the show's seventh episode, the main character (Sam) who is questioning his reality breifly hears doctors' voices talking to him and the song \"Toxic\" by Britney Spears."
+        "answer-exp": "In the show's seventh episode, the main character (Sam), who is questioning his reality, briefly hears doctors' voices talking to him and the song \"Toxic\" by Britney Spears."
     },
     12: {
         "icon": "fighter-jet",
