@@ -3,15 +3,15 @@ $(document).ready(function() {
     $('#start-btn').click(function() {   
         replaceHeading();
         $('#start').fadeOut(500, function() {
-            $('#testimonials').fadeOut(100, function(){
-                newGame();
-                findQuestion();
-                loadQuestion();
-                $("#quiz").fadeIn(500);
-            });
+            newGame();
+            findQuestion();
+            loadQuestion();
+            $('#quiz').fadeIn(500);
         });
+        $('#testimonials').fadeOut(500);
+        $('.disclaim').fadeOut(500);
     });
-    $("#answer-btn").click(function() {
+    $('#answer-btn').click(function() {
         var user_answer = $('input:radio[name=ans]:checked').val();
         if (!user_answer) {
             alert('Please make a selection!');
@@ -31,7 +31,7 @@ $(document).ready(function() {
             }
         }
     });
-    $(".cont-btn").click(function() {       
+    $('.cont-btn').click(function() {       
         $('#correct').fadeOut(500, function() {
             $('#wrong').fadeOut(500, function() {
                 if (count >= count_limit) {
@@ -47,13 +47,13 @@ $(document).ready(function() {
             });
         });
     });
-    $("#start-over").click(function() {       
-        $("#final").fadeOut(500, function() {
+    $('#start-over').click(function() {       
+        $('#final').fadeOut(500, function() {
             newGame();
             findQuestion();
             loadQuestion();
             $('form input').prop('checked', false);
-            $("#quiz").fadeIn(500);    
+            $('#quiz').fadeIn(500);    
         });
     });
 });
@@ -66,8 +66,8 @@ var prior_questions = [];
 
 var replaceHeading = function() {
     var head = $("<span>The Time Travel Trivia Quiz</span>");
-    $("h1").find("span").remove();
-    $("h1").append(head);
+    $('h1').find("span").remove();
+    $('h1').append(head);
 };
 var cycleTestimonials = function(index,prev) {
     $('#testimonials').children('p:eq(' + prev + ')').delay(1800).fadeOut(800, function(){

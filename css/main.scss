@@ -1,7 +1,11 @@
 
 $black: #000000;
 $off-white: #fffadd;
+$gray: #cccccc;
 $bright-blue: #3366cc;
+$light-blue: #94a3d1;
+$green: #66cc99;
+$red: #cc6699;
 
 $bkgd-medium: rgba(52,81,133,0.6);
 $bkgd-dark: rgba(0,0,71,0.5);
@@ -89,19 +93,6 @@ h1 {
         padding: 2rem;
     }
 }
-#quiz-home {
-
-    #home-stats {
-        float: left;
-        width: 40%;
-        border: 1px solid green;
-    }
-    #question-history {
-        float: right;
-        width: 52%;
-        border: 1px solid green;
-    }
-}
 button {
     background-color: #66cc99;
     padding: 12px;
@@ -142,7 +133,7 @@ button {
     padding: 3% 10% 3% 10%;    
     font-size: 2rem;
     strong {
-        color: #94A3D1;
+        color: $light-blue;
         font-weight: normal;
     }
     #icon {
@@ -175,9 +166,9 @@ button {
     }
 }
 #correct {
-    color: #66cc99;
-    border: 1px solid #66cc99;
-    background-color: #002247;
+    color: $green;
+    border: 1px solid $green;
+    background-color: $bkgd-dark;
     h2 {
         font-size: 3rem;
         text-shadow: 2px 2px 4px $black;
@@ -186,9 +177,9 @@ button {
     }
 }
 #wrong {
-    color: #cc6699;
-    border: 1px solid #cc6699;    
-    background-color: #220047;
+    color: $red;
+    border: 1px solid $red;    
+    background-color: $bkgd-dark;
     h2 {
         font-size: 3rem;
         text-shadow: 2px 2px 4px $black;
@@ -204,24 +195,18 @@ button {
     }
     .score, .rank {
         font-size: 3rem;
-        color: #66cc99;
+        color: $green;
         padding-left: 1rem;
     }
 }
 footer {
-    color: $off-white;
+    color: $gray;
     .disclaim {
         padding-left: 20%;
         padding-right: 20%;
     }
     div {
         margin-bottom: 1rem;
-    }
-    a:link, a:active, a:visited, a:hover {
-        color: $bright-blue;
-    }
-    a:hover {
-        color: #33c;
     }
 }
 @media (max-width: 600px) {
@@ -238,8 +223,3 @@ footer {
     }
 
 }
-
-
-
-
-
