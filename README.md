@@ -102,13 +102,21 @@ This function resets game environment vars (e.g., the user's score, question his
 
 ##### wasAsked()
 
+This function takes the ...
+
 ##### loadQuestion()
 
-##### correct()
+##### correct(user_answer)
+
+This function takes the int representing the user's answer and returns true or false if it matches the correct answer to the current question. 
 
 ##### updateScore()
 
+This function refreshes the current score to ensure the current score is displayed to the user.
+
 ##### updateRank()
+
+This function uses jQuery to display the final rank achieved by the user (and a related message) based on a possible score of 1 to 10. The current five ranks used by the web app assume a total of ten questions and a possible score of 0 to 10. If the scoring is altered or the number of questions is modified, the ranks and score ranges also need to be changed.  
 
 ## Copyright and License
 
