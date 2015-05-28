@@ -42,7 +42,7 @@ time-travel-trivia-quiz-master.zip/
 
 The functions used to run the trivia quiz are located in [js/app.js](https://github.com/edwardbryant/Time-Travel-Trivia-Quiz/blob/master/js/app.js) and are explained in more fully below. 
 
-#### replaceHeading()
+##### replaceHeading()
 
 This function is purely cosmetic and is used to reduce the size of the existing pages's header to allow more space for displaying question/answer content.
 
