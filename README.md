@@ -70,12 +70,15 @@ This is the text of the question itself. There is no set maximum length, but fon
 
 ##### options
 
-This is a 
+This is a numbered set of possible answers to the question.
 
 ##### answer
 
+This is the number of the correct answer from among the possible answers listed in options
+
 ##### answer-exp
 
+This is a text string explaining the correct answer or provided additional information about the answer. This is presented to the user after they answer the question together with an indication of whetehr the user answered the question correctly.  
 
 #### Functions
 
@@ -91,6 +94,8 @@ This function is another cosmetic extra which is used to cycle the joke 'testimo
 
 ##### newGame()
 
+This function resets game environment vars (e.g., the user's score, question history, etc.).  
+
 ##### findQuestion()
 
 ##### pickQuestion()
@@ -104,9 +109,6 @@ This function is another cosmetic extra which is used to cycle the joke 'testimo
 ##### updateScore()
 
 ##### updateRank()
-
-
-This function resets game environment vars (e.g., the user's score, question history, etc.).  
 
 ## Copyright and License
 
