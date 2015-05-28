@@ -98,17 +98,23 @@ This function resets game environment vars (e.g., the user's score, question his
 
 ##### findQuestion()
 
+This function determines a new previously unasked question to present to the user. It calls pickQuestion (see below) to randomly get a possible question and calls wasAsked (see below) to determine if it was already asked. If a question was already asked the function rpeatedly calls pickQuestion until it finds one that has not been used.  
+
 ##### pickQuestion()
+
+This question randomly selects a question from the JSON object quiz_questions and assigns that question's number to the num var.
 
 ##### wasAsked()
 
-This function takes the ...
+This function looks at the num var (the number of a possible question to ask) and checks prior_questions (i.e., the list of previously asked questions) to determine if the question was already asked. The function returns a boolean true/false value.
 
 ##### loadQuestion()
 
+This function takes the question number in num var and presents the content in the quiz_questions object to the user.
+
 ##### correct(user_answer)
 
-This function takes the int representing the user's answer and returns true or false if it matches the correct answer to the current question. 
+This function takes the user_answer (a int representing the option the user selected) and returns true or false if it matches the correct answer to the current question. 
 
 ##### updateScore()
 
