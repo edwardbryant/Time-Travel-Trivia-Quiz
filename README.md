@@ -42,15 +42,19 @@ time-travel-trivia-quiz-master.zip/
 
 The functions used to run the trivia quiz are located in [js/app.js](https://github.com/edwardbryant/Time-Travel-Trivia-Quiz/blob/master/js/app.js) and are explained in more fully below. 
 
-### replaceHeading()
+#### replaceHeading()
 
 This function is purely cosmetic and is used to reduce the size of the existing pages's header to allow more space for displaying question/answer content.
 
-### cycleTestimonials(index, prev)
+#### cycleTestimonials(index, prev)
 
 This function is another cosmetic extra which is used to cycle the joke 'testimonials' that appear on the start page. 
 
-### newGame()
+#### newGame()
+
+#### findQuestion()
+
+#### pickQuestion()
 
 This function resets game environment vars (e.g., the user's score, question history, etc.).  
 
