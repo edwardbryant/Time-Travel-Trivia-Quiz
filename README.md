@@ -1,6 +1,6 @@
 # Time-Travel-Trivia-Quiz
 
-The original version of this project was completed for Thinkful's Frontend Developer Program. The project demonstrates the use of HTML, CSS, JavaScript, JSON, and jQuery as the basis of a simple web-based trivia game. In completing the assignment, I selected a theme focused on trivia concerning time travel in popular media (e.g., movies, television, books). The complete code is provided below for anyone who may find it useful.  
+The original version of this project was completed for [Thinkful's Frontend Developer Program](https://www.thinkful.com/courses/learn-web-development-online/). The project demonstrates the use of HTML, CSS, JavaScript, JSON, and jQuery as the basis of a simple web-based trivia game. In completing the assignment, I selected a theme focused on trivia concerning time travel in popular media (e.g., movies, television, books). The complete code is provided below for anyone who may find it useful.  
 
 ## Table of contents
 
@@ -82,7 +82,7 @@ This is a text string explaining the correct answer or provided additional infor
 
 #### Functions
 
-The functions used to run the trivia quiz are located in [js/app.js](https://github.com/edwardbryant/Time-Travel-Trivia-Quiz/blob/master/js/app.js) and are explained in more fully below. 
+The functions used to run the trivia quiz are located in [js/app.js](https://github.com/edwardbryant/Time-Travel-Trivia-Quiz/blob/master/js/app.js) and are explained more fully below. 
 
 ##### replaceHeading()
 
